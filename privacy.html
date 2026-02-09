@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Parasify</title>
+    <meta name="description" content="Parasify Privacy Policy. Your financial data stays on your device. We collect nothing.">
+    <link rel="canonical" href="https://parasify.app/privacy">
+    <style>
+        :root {
+            --primary: #007AFF;
+            --bg: #000000;
+            --bg-card: #1C1C1E;
+            --text: #FFFFFF;
+            --text-secondary: #8E8E93;
+            --border: #38383A;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+        nav {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-left: 24px;
+            padding-right: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .nav-links a {
+            color: var(--text-secondary); text-decoration: none; margin-left: 32px;
+            font-size: 0.95rem; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .content { padding: 60px 0 80px; }
+        h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; }
+        .effective-date { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 48px; }
+        h2 { font-size: 1.35rem; font-weight: 700; margin-top: 40px; margin-bottom: 16px; }
+        p { color: var(--text-secondary); margin-bottom: 16px; font-size: 1rem; }
+        ul { color: var(--text-secondary); margin-bottom: 16px; padding-left: 24px; }
+        li { margin-bottom: 8px; }
+        strong { color: var(--text); }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        .highlight-box p { margin-bottom: 0; }
+        footer {
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-left: 24px;
+            padding-right: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        footer p { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 0; }
+        footer a { color: var(--text-secondary); margin-left: 24px; font-size: 0.85rem; }
+        @media (max-width: 640px) {
+            h1 { font-size: 1.8rem; }
+            footer { flex-direction: column; text-align: center; }
+            footer a { margin-left: 0; margin-right: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Parasify</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p class="effective-date">Effective Date: February 9, 2026</p>
+
+            <div class="highlight-box">
+                <p><strong>In short:</strong> Parasify does not collect, transmit, or store any of your personal or financial data on external servers. Everything stays on your device. We have no analytics, no tracking, no advertising, and no user accounts.</p>
+            </div>
+
+            <h2>1. Overview</h2>
+            <p>Parasify ("the App") is a personal finance tracking application developed by Ahmet Kochan ("we", "us", "our"). We are committed to protecting your privacy. This Privacy Policy explains how the App handles your information.</p>
+            <p>Parasify is designed with a privacy-first architecture. Your financial data is stored exclusively on your device using Apple's CoreData framework. We have no ability to access, view, or retrieve your data.</p>
+
+            <h2>2. Data Storage</h2>
+            <p>All financial data you enter into Parasify — including transactions, budgets, wallets, assets, debts, loans, goals, categories, and settings — is stored locally on your device using Apple's CoreData framework.</p>
+            <ul>
+                <li><strong>No external servers:</strong> Your financial data is never sent to our servers or any third-party servers.</li>
+                <li><strong>No user accounts:</strong> Parasify does not require you to create an account, sign up, or provide any personal information to use the App.</li>
+                <li><strong>No backups on our servers:</strong> Backups created within the App (JSON export) are saved to locations you choose on your device or iCloud Drive.</li>
+            </ul>
+
+            <h2>3. iCloud Sync (Optional)</h2>
+            <p>If you choose to enable iCloud sync, your data is synchronized across your Apple devices through your personal iCloud account using Apple's CloudKit framework.</p>
+            <ul>
+                <li>Data syncs directly between your devices through Apple's infrastructure.</li>
+                <li>Parasify does not have access to your iCloud account or your synced data.</li>
+                <li>Apple encrypts CloudKit data in transit and at rest.</li>
+                <li>iCloud sync is entirely optional and can be disabled at any time in the App's settings.</li>
+                <li>For more information about how Apple handles iCloud data, see <a href="https://support.apple.com/en-us/102651" target="_blank" rel="noopener">Apple's iCloud security overview</a>.</li>
+            </ul>
+
+            <h2>4. Family & Wallet Sharing (Optional)</h2>
+            <p>Parasify offers optional sharing features powered by Apple's CloudKit sharing API:</p>
+            <ul>
+                <li><strong>Wallet Sharing:</strong> You can share individual wallets with other Parasify users. Shared data is transmitted through Apple's CloudKit infrastructure.</li>
+                <li><strong>Family Sharing:</strong> You can share all financial data with family members. This uses Apple's CloudKit sharing.</li>
+                <li>We do not have access to shared data. All sharing is peer-to-peer through Apple's servers.</li>
+                <li>You can stop sharing at any time.</li>
+            </ul>
+
+            <h2>5. Camera & Document Scanning</h2>
+            <p>Parasify uses your device's camera solely for scanning receipts and financial documents.</p>
+            <ul>
+                <li>All image processing and text recognition (OCR) happens locally on your device using Apple's VisionKit framework.</li>
+                <li>Scanned images and extracted data are stored only on your device.</li>
+                <li>No images or scanned data are ever uploaded to any server.</li>
+                <li>Camera access requires your explicit permission and can be revoked at any time in iOS Settings.</li>
+            </ul>
+
+            <h2>6. Biometric Authentication (Face ID / Touch ID)</h2>
+            <p>If you enable the app lock feature, Parasify uses Apple's LocalAuthentication framework to verify your identity.</p>
+            <ul>
+                <li>Parasify never accesses, processes, or stores your biometric data.</li>
+                <li>Authentication is handled entirely by the iOS operating system.</li>
+                <li>The App only receives a success or failure result from the system.</li>
+            </ul>
+
+            <h2>7. Exchange Rate & Market Data</h2>
+            <p>To provide live currency exchange rates, cryptocurrency prices, and commodity prices, Parasify fetches market data from our backend service.</p>
+            <ul>
+                <li><strong>What is transmitted:</strong> Only currency codes, cryptocurrency identifiers, and commodity types (e.g., "USD", "EUR", "BTC", "XAU"). No personal or financial data is included in these requests.</li>
+                <li><strong>Server:</strong> Our backend service aggregates publicly available market data and serves it to the App. No user-identifiable information is logged or stored.</li>
+                <li><strong>No personal data:</strong> These requests contain no account information, device identifiers, IP address logging, or any data that could identify you.</li>
+                <li>Exchange rates are cached locally on your device to minimize network requests.</li>
+            </ul>
+
+            <h2>8. Notifications</h2>
+            <p>Parasify can send local notifications for budget alerts, recurring transaction reminders, and payment due dates.</p>
+            <ul>
+                <li>All notifications are generated and scheduled locally on your device.</li>
+                <li>We do not use push notification services or remote notification servers.</li>
+                <li>Notification permissions can be managed in iOS Settings.</li>
+            </ul>
+
+            <h2>9. In-App Purchases & Subscriptions</h2>
+            <p>Parasify offers optional premium features through in-app purchases managed by Apple's App Store.</p>
+            <ul>
+                <li>All purchase transactions are processed by Apple. We do not have access to your payment information, credit card details, or Apple ID.</li>
+                <li>We receive only a transaction confirmation from Apple's StoreKit framework to unlock premium features.</li>
+                <li>Subscription management is handled through your Apple ID account settings.</li>
+            </ul>
+
+            <h2>10. Analytics, Tracking & Advertising</h2>
+            <div class="highlight-box">
+                <p><strong>Parasify does not use any analytics SDKs, crash reporting services, advertising networks, or tracking technologies.</strong> We do not collect usage data, device information, IP addresses, or any form of telemetry. There are no third-party SDKs in the App that collect data.</p>
+            </div>
+
+            <h2>11. Third-Party Services</h2>
+            <p>Parasify does not integrate with any third-party services that collect user data. The only external services used are:</p>
+            <ul>
+                <li><strong>Apple's App Store:</strong> For in-app purchases (managed by Apple).</li>
+                <li><strong>Apple's CloudKit:</strong> For optional iCloud sync and sharing (managed by Apple).</li>
+                <li><strong>Our market data API:</strong> For exchange rates only (no personal data transmitted).</li>
+            </ul>
+
+            <h2>12. Data Deletion</h2>
+            <p>Since all data is stored on your device:</p>
+            <ul>
+                <li>You can delete all data at any time using the "Delete All Data" option in the App's settings.</li>
+                <li>Uninstalling the App removes all locally stored data.</li>
+                <li>If iCloud sync is enabled, you can manage synced data through your iCloud account settings.</li>
+                <li>We have no data to delete on our end because we never collect any.</li>
+            </ul>
+
+            <h2>13. Children's Privacy</h2>
+            <p>Parasify is not directed at children under the age of 13. We do not knowingly collect any personal information from children. Since the App does not collect any personal data from any user, there is no risk of children's data being collected.</p>
+
+            <h2>14. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated effective date. Since we do not collect email addresses or contact information, we encourage you to review this page periodically.</p>
+
+            <h2>15. Contact</h2>
+            <p>If you have any questions about this Privacy Policy or the App's privacy practices, please contact us at:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@parasify.app">support@parasify.app</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Parasify. All rights reserved.</p>
+        <div>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+            <a href="mailto:support@parasify.app">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parasify - Private Budget Tracker</title>
+    <meta name="description" content="Parasify is a privacy-focused personal finance app. Track budgets, expenses, income, assets, debts, and net worth. All data stays on your device.">
+    <meta name="keywords" content="budget tracker, expense tracker, personal finance, privacy, iOS app, net worth, money management">
+    <meta property="og:title" content="Parasify - Private Budget Tracker">
+    <meta property="og:description" content="Your money. Your device. Your privacy. Track everything, share nothing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://parasify.app">
+    <link rel="canonical" href="https://parasify.app">
+    <style>
+        :root {
+            --primary: #007AFF;
+            --success: #34C759;
+            --warning: #FFD60A;
+            --bg: #000000;
+            --bg-card: #1C1C1E;
+            --text: #FFFFFF;
+            --text-secondary: #8E8E93;
+            --border: #38383A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 32px;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text); }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 100px 0 80px;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            padding: 8px 20px;
+            font-size: 0.85rem;
+            color: var(--success);
+            margin-bottom: 32px;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--primary), var(--success));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+        .app-store-btn {
+            display: inline-block;
+            background: var(--text);
+            color: var(--bg);
+            padding: 16px 40px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: opacity 0.2s;
+        }
+        .app-store-btn:hover { opacity: 0.85; }
+
+        /* Features Grid */
+        .features {
+            padding: 80px 0;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .features .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+            font-size: 1.1rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Privacy Section */
+        .privacy-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .privacy-section .shield {
+            font-size: 4rem;
+            margin-bottom: 24px;
+        }
+        .privacy-section h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .privacy-section p {
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+        .privacy-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+        .pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            padding: 10px 24px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        footer p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        footer a:hover { color: var(--text); }
+
+        @media (max-width: 640px) {
+            .hero { padding: 60px 0 40px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .nav-links a { margin-left: 16px; font-size: 0.85rem; }
+            footer .container { flex-direction: column; text-align: center; }
+            footer a { margin-left: 0; margin-right: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Parasify</a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="/privacy">Privacy</a>
+                <a href="/terms">Terms</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">100% On-Device &bull; No Tracking &bull; No Accounts</div>
+            <h1>Your money.<br><span class="highlight">Your privacy.</span></h1>
+            <p>Parasify is a personal finance app that keeps all your data on your device. Track budgets, expenses, assets, debts, and net worth without sharing a single byte.</p>
+            <a href="#" class="app-store-btn">Download on the App Store</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Everything you need to manage your money</h2>
+            <p class="subtitle">50+ features. Zero data collection.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">&#x1F4B0;</div>
+                    <h3>Budgets & Expenses</h3>
+                    <p>Create budgets by category, track every expense, and get alerts before you overspend.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#x1F4C8;</div>
+                    <h3>Net Worth Tracking</h3>
+                    <p>Monitor assets, debts, loans, and investments in one place. See your financial health at a glance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#x1F4B1;</div>
+                    <h3>Multi-Currency</h3>
+                    <p>Track finances in any currency with live exchange rates. Perfect for travelers and global citizens.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#x1F4F7;</div>
+                    <h3>Receipt Scanning</h3>
+                    <p>Scan receipts with your camera. Smart categorization saves you time on data entry.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#x1F3AF;</div>
+                    <h3>Financial Goals</h3>
+                    <p>Set savings targets, track progress, and stay motivated to reach your financial milestones.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#x1F504;</div>
+                    <h3>Recurring Transactions</h3>
+                    <p>Automate rent, subscriptions, and regular payments. Never forget a recurring expense.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#x1F4B3;</div>
+                    <h3>Credit Card Tracking</h3>
+                    <p>Track statements, billing cycles, and payment due dates. Stay on top of your credit.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#x1F310;</div>
+                    <h3>iCloud Sync</h3>
+                    <p>Optional sync through your own iCloud account. Your data goes through Apple, not us.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#x1F30D;</div>
+                    <h3>5 Languages</h3>
+                    <p>Available in English, German, Spanish, Turkish, and French. More languages coming soon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="privacy-section">
+        <div class="container">
+            <div class="shield">&#x1F6E1;&#xFE0F;</div>
+            <h2>Privacy is not a feature. It's the foundation.</h2>
+            <p>Parasify is built from the ground up with privacy at its core. We never see, collect, or transmit your financial data. Ever.</p>
+            <div class="privacy-pills">
+                <span class="pill">No analytics SDKs</span>
+                <span class="pill">No crash reporting</span>
+                <span class="pill">No advertising</span>
+                <span class="pill">No user accounts</span>
+                <span class="pill">No server storage</span>
+                <span class="pill">No third-party sharing</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Parasify. All rights reserved.</p>
+            <div>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="mailto:support@parasify.app">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
