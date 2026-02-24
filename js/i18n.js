@@ -43,7 +43,7 @@
 
   // Load translations for non-English languages
   if (lang !== 'en' && page) {
-    fetch('/parasify-website/lang/' + page + '/' + lang + '.json')
+    fetch('/parasify-website/lang/' + page + '/' + lang + '.json?v=2')
       .then(function (res) {
         if (!res.ok) throw new Error('Translation not found');
         return res.json();
