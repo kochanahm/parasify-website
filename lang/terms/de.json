@@ -48,5 +48,8 @@
   "footer-copy": "&copy; 2025 Parasify. Alle Rechte vorbehalten.",
   "footer-privacy": "Datenschutzrichtlinie",
   "footer-terms": "Nutzungsbedingungen",
-  "footer-contact": "Kontakt"
+  "footer-contact": "Kontakt",
+  "nav-home": "Startseite",
+  "nav-privacy": "Datenschutz",
+  "nav-terms": "Bedingungen"
 }
