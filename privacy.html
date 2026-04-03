@@ -123,41 +123,41 @@
     <div class="content">
         <div class="container">
             <h1 data-i18n="title">Privacy Policy</h1>
-            <p class="effective-date" data-i18n="effective-date">Effective Date: February 9, 2026</p>
+            <p class="effective-date" data-i18n="effective-date">Effective Date: April 3, 2026</p>
 
             <div class="highlight-box">
-                <p data-i18n="summary"><strong>In short:</strong> Parasify does not collect, transmit, or store any of your personal or financial data on external servers. Everything stays on your device. We have no analytics, no tracking, no advertising, and no user accounts.</p>
+                <p data-i18n="summary"><strong>In short:</strong> Parasify stores all your financial data locally on your device by default. If you choose to enable Cloud Synchronization (a premium feature), your data is securely stored on Supabase servers. We have no analytics, no tracking, and no advertising.</p>
             </div>
 
             <h2 data-i18n="s1-heading">1. Overview</h2>
             <p data-i18n="s1-p1">Parasify ("the App") is a personal finance tracking application developed by Ahmet Kochan ("we", "us", "our"). We are committed to protecting your privacy. This Privacy Policy explains how the App handles your information.</p>
-            <p data-i18n="s1-p2">Parasify is designed with a privacy-first architecture. Your financial data is stored exclusively on your device using Apple's CoreData framework. We have no ability to access, view, or retrieve your data.</p>
+            <p data-i18n="s1-p2">Parasify is designed with a privacy-first architecture. Your financial data is stored locally on your device using Apple's CoreData framework by default. If you enable Cloud Synchronization, your data is securely stored on Supabase servers to enable backup and Family Sharing features.</p>
 
             <h2 data-i18n="s2-heading">2. Data Storage</h2>
             <p data-i18n="s2-p1">All financial data you enter into Parasify — including transactions, budgets, wallets, assets, debts, loans, goals, categories, and settings — is stored locally on your device using Apple's CoreData framework.</p>
             <ul data-i18n="s2-list">
                 <li><strong>No external servers:</strong> Your financial data is never sent to our servers or any third-party servers.</li>
                 <li><strong>No user accounts:</strong> Parasify does not require you to create an account, sign up, or provide any personal information to use the App.</li>
-                <li><strong>No backups on our servers:</strong> Backups created within the App (JSON export) are saved to locations you choose on your device or iCloud Drive.</li>
+                <li><strong>No backups on our servers:</strong> Backups created within the App (JSON export) are saved to locations you choose on your device. If Cloud Synchronization is enabled, your data is also stored on Supabase servers.</li>
             </ul>
 
-            <h2 data-i18n="s3-heading">3. iCloud Sync (Optional)</h2>
-            <p data-i18n="s3-p1">If you choose to enable iCloud sync, your data is synchronized across your Apple devices through your personal iCloud account using Apple's CloudKit framework.</p>
+            <h2 data-i18n="s3-heading">3. Cloud Synchronization (Optional, Premium)</h2>
+            <p data-i18n="s3-p1">If you choose to enable Cloud Synchronization, your data is securely stored on Supabase servers to keep it backed up and synchronized across your devices. This is a premium feature.</p>
             <ul data-i18n="s3-list">
-                <li>Data syncs directly between your devices through Apple's infrastructure.</li>
-                <li>Parasify does not have access to your iCloud account or your synced data.</li>
-                <li>Apple encrypts CloudKit data in transit and at rest.</li>
-                <li>iCloud sync is entirely optional and can be disabled at any time in the App's settings.</li>
-                <li>For more information about how Apple handles iCloud data, see <a href="https://support.apple.com/en-us/102651" target="_blank" rel="noopener">Apple's iCloud security overview</a>.</li>
+                <li><strong>What is stored:</strong> Your Apple ID (for authentication) and your financial data (transactions, budgets, wallets, assets, debts, loans, goals, categories, and settings) are stored on Supabase servers.</li>
+                <li>All data is encrypted in transit (TLS) and at rest on Supabase's infrastructure.</li>
+                <li>Cloud Synchronization is required for the Family Sharing feature.</li>
+                <li>Cloud Synchronization is entirely optional and can be disabled at any time in the App's settings.</li>
+                <li>For more information about how Supabase handles data, see <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</li>
             </ul>
 
-            <h2 data-i18n="s4-heading">4. Family & Wallet Sharing (Optional)</h2>
-            <p data-i18n="s4-p1">Parasify offers optional sharing features powered by Apple's CloudKit sharing API:</p>
+            <h2 data-i18n="s4-heading">4. Family Sharing (Optional, Premium)</h2>
+            <p data-i18n="s4-p1">Parasify offers an optional Family Sharing feature that allows you to share all your financial data with family members. This is a premium feature that requires Cloud Synchronization to be enabled.</p>
             <ul data-i18n="s4-list">
-                <li><strong>Wallet Sharing:</strong> You can share individual wallets with other Parasify users. Shared data is transmitted through Apple's CloudKit infrastructure.</li>
-                <li><strong>Family Sharing:</strong> You can share all financial data with family members. This uses Apple's CloudKit sharing.</li>
-                <li>We do not have access to shared data. All sharing is peer-to-peer through Apple's servers.</li>
-                <li>You can stop sharing at any time.</li>
+                <li>Shared data is stored and transmitted through Supabase's secure cloud infrastructure.</li>
+                <li>You control who has access to your shared data and can stop sharing at any time.</li>
+                <li>Family members must also be Parasify premium users to access shared data.</li>
+                <li>You can stop sharing at any time through the App's settings.</li>
             </ul>
 
             <h2 data-i18n="s5-heading">5. Camera & Document Scanning</h2>
@@ -221,7 +221,7 @@
             <p data-i18n="s12-p1">Parasify does not integrate with any third-party services that collect user data. The only external services used are:</p>
             <ul data-i18n="s12-list">
                 <li><strong>Apple's App Store:</strong> For in-app purchases (managed by Apple).</li>
-                <li><strong>Apple's CloudKit:</strong> For optional iCloud sync and sharing (managed by Apple).</li>
+                <li><strong>Supabase:</strong> For optional Cloud Synchronization and Family Sharing (premium features). Your Apple ID and financial data are stored on Supabase servers when enabled. See <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</li>
                 <li><strong>Our market data API:</strong> For exchange rates only (no personal data transmitted).</li>
                 <li><strong>Google's Gemini API:</strong> For the optional AI Chat feature (anonymized financial context only, no personal data).</li>
             </ul>
@@ -231,7 +231,7 @@
             <ul data-i18n="s13-list">
                 <li>You can delete all data at any time using the "Delete All Data" option in the App's settings.</li>
                 <li>Uninstalling the App removes all locally stored data.</li>
-                <li>If iCloud sync is enabled, you can manage synced data through your iCloud account settings.</li>
+                <li>If Cloud Synchronization is enabled, you can delete your cloud data through the App's settings or by contacting us.</li>
                 <li>We have no data to delete on our end because we never collect any.</li>
             </ul>
 
